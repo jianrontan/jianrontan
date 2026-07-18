@@ -78,13 +78,15 @@ Engines tell you the best move; they can't tell you *why*. This is a **RAG pipel
 <summary><samp>Where I've used all this</samp></summary>
 <br>
 
-- **CPF Board** — Azure GCC infra and CI/CD: Terraform provisioning, AKS, Azure DevOps pipeline templates across non-prod and prod.
-- **NUS Sheares Web** — GitHub Actions CI/CD with Liquibase schema migrations and a plan/apply data pipeline on Postgres; AWS infra with SST (CloudFront, Lambda SSR, S3), isolated preprod/prod on Supabase.
-- **Screening Eagle | Proceq** — Cross-platform E2E test framework (Playwright + TypeScript, 10+ device/browser configs on BrowserStack, GitLab CI); 100+ regression cases automated with Python and AltTester.
-- **TES Capital** — AI document automation (ChatGPT API, n8n, React, Flask): OCR + prompt workflows turning unstructured insurance data into standardised policy documents at 95% accuracy.
-- **Hysses** — Full-stack ops platform (React, Node.js, Express, MySQL, Docker) with a custom NetSuite↔MySQL integration API.
+- **CPF Board**: Azure GCC infra and CI/CD: Terraform provisioning, AKS, Azure DevOps pipeline templates across non-prod and prod.
+- **NUS Sheares Web**: GitHub Actions CI/CD with Liquibase schema migrations and a plan/apply data pipeline on Postgres; AWS infra with SST (CloudFront, Lambda SSR, S3), isolated preprod/prod on Supabase.
+- **Screening Eagle | Proceq**: Cross-platform E2E test framework (Playwright + TypeScript, 10+ device/browser configs on BrowserStack, GitLab CI); 100+ regression cases automated with Python and AltTester.
+- **TES Capital**: AI document automation (ChatGPT API, n8n, React, Flask): OCR + prompt workflows turning unstructured insurance data into standardised policy documents at 95% accuracy.
+- **Hysses**: Full-stack ops platform (React, Node.js, Express, MySQL, Docker) with a custom NetSuite↔MySQL integration API.
 
 </details>
+
+<!-- Stats hidden until the public github-readme-stats instance is reliable (or self-hosted)
 
 ## <samp>Stats</samp>
 
@@ -100,6 +102,8 @@ Engines tell you the best move; they can't tell you *why*. This is a **RAG pipel
     <img alt="Top languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jianrontan&layout=compact&hide_border=true&hide=html,css,jupyter%20notebook">
   </picture>
 </p>
+
+-->
 
 ---
 
