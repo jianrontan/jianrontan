@@ -17,7 +17,7 @@ I'm Jian Ron, a Computer Science undergraduate at NUS. Currently an SRE intern a
 ### <samp>♠️ AllIn: heads-up poker AI</samp>
 
 <a href="https://github.com/jianrontan/AllIn">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=jianrontan&repo=AllIn&theme=default" alt="AllIn repo card">
+  <img src="https://opengraph.githubassets.com/1/jianrontan/AllIn" alt="AllIn repo card" width="15%">
 </a>
 
 A poker bot you can actually play, live at **[allin.jianrontan.com](https://allin.jianrontan.com)**.
@@ -30,7 +30,7 @@ A poker bot you can actually play, live at **[allin.jianrontan.com](https://alli
 ### <samp>♟️ Chess explanation engine</samp>
 
 <a href="https://github.com/jianrontan/Chess">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=jianrontan&repo=Chess&theme=default" alt="Chess repo card">
+  <img src="https://opengraph.githubassets.com/1/jianrontan/Chess" alt="Chess repo card" width="15%">
 </a>
 
 Engines tell you the best move; they can't tell you *why*. This is a **RAG pipeline that grounds LLM chess explanations in Stockfish analysis and retrieved human commentaries**, so the explanation matches what the engine actually sees. In progress.
