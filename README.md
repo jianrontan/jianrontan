@@ -4,7 +4,8 @@
 
 <p align="center">
   <a href="mailto:jianrontan101@gmail.com"><img src="https://img.shields.io/badge/Email-jianrontan101%40gmail.com-EA4335?style=flat&logo=gmail&logoColor=white" alt="Email"></a>
-  <a href="https://allin.jianrontan.com"><img src="https://img.shields.io/badge/Live%20Project-allin.jianrontan.com-232F3E?style=flat&logo=cloudflare&logoColor=F38020" alt="AllIn live site"></a>
+  <a href="https://allin.jianrontan.com"><img src="https://img.shields.io/badge/AllIn-allin.jianrontan.com-232F3E?style=flat&logo=cloudflare&logoColor=F38020" alt="AllIn live site"></a>
+  <a href="https://chess.jianrontan.com"><img src="https://img.shields.io/badge/Chess-chess.jianrontan.com-4169E1?style=flat&logo=lichess&logoColor=white" alt="Chess live site"></a>
   <img src="https://img.shields.io/badge/Based%20in-Singapore-ED2939?style=flat" alt="Singapore">
 </p>
 
@@ -17,7 +18,7 @@ I'm Jian Ron, a Computer Science undergraduate at NUS. Currently an SRE intern a
 ### <samp>♠️ AllIn: heads-up poker AI</samp>
 
 <a href="https://github.com/jianrontan/AllIn">
-  <img src="https://opengraph.githubassets.com/1/jianrontan/AllIn" alt="AllIn repo card" width="15%">
+  <img src="https://opengraph.githubassets.com/1/jianrontan/AllIn" alt="AllIn repo card" width="20%">
 </a>
 
 A poker bot you can actually play, live at **[allin.jianrontan.com](https://allin.jianrontan.com)**.
@@ -30,10 +31,10 @@ A poker bot you can actually play, live at **[allin.jianrontan.com](https://alli
 ### <samp>♟️ Chess explanation engine</samp>
 
 <a href="https://github.com/jianrontan/Chess">
-  <img src="https://opengraph.githubassets.com/1/jianrontan/Chess" alt="Chess repo card" width="15%">
+  <img src="https://opengraph.githubassets.com/1/jianrontan/Chess" alt="Chess repo card" width="20%">
 </a>
 
-Engines tell you the best move; they can't tell you *why*. This is a **RAG pipeline that grounds LLM chess explanations in Stockfish analysis and retrieved human commentaries**, so the explanation matches what the engine actually sees. In progress.
+Engines tell you the best move; they can't tell you *why*. This is a **RAG pipeline that grounds LLM chess explanations in Stockfish analysis and retrieved human commentaries**, so the explanation matches what the engine actually sees. Live at **[chess.jianrontan.com](https://chess.jianrontan.com)**.
 
 ## <samp>Stack</samp>
 
