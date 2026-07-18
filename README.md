@@ -1,4 +1,4 @@
-<h1 align="center"><samp>jianrontan</samp></h1>
+<h1 align="center"><samp>Tan Jian Ron</samp></h1>
 
 <p align="center"><samp>Computer Science @ NUS · SRE intern @ CPF Board · Singapore</samp></p>
 
@@ -11,7 +11,7 @@
 
 ## <samp>About</samp>
 
-I'm Jian Ron, a Computer Science undergraduate at NUS. Currently an SRE intern at the Central Provident Fund Board, working on Terraform, AKS, and Azure DevOps pipelines for systems serving 4M+ CPF members. Also Vice-Chair of NUS Sheares Web, where I lead 16 developers shipping a hall intranet and React Native app used by 400+ residents.
+<samp>I'm Ron, a Computer Science undergraduate at NUS. Currently an SRE intern at the Central Provident Fund Board, working on Terraform, AKS, and Azure DevOps pipelines for systems serving 4M+ CPF members. Also Vice-Chair of NUS Sheares Web, where I lead 16 developers shipping a hall intranet and React Native app used by 400+ residents.</samp>
 
 ## <samp>Projects</samp>
 
@@ -21,12 +21,12 @@ I'm Jian Ron, a Computer Science undergraduate at NUS. Currently an SRE intern a
   <img src="https://opengraph.githubassets.com/1/jianrontan/AllIn" alt="AllIn repo card" width="20%">
 </a>
 
-A poker bot you can actually play, live at **[allin.jianrontan.com](https://allin.jianrontan.com)**.
+<samp>A poker bot you can actually play, live at **[allin.jianrontan.com](https://allin.jianrontan.com)**.</samp>
 
-- Trained a **200K info-set CFR blueprint over 50M self-play iterations** for heads-up play.
-- On high-stakes river decisions it doesn't just read the blueprint: a **safe, blueprint-anchored solver runs CFR live** to approximate game-theory-optimal play in real time.
-- Productionised end to end: Flask/gunicorn API on **AWS Lightsail** behind **Cloudflare**, with DynamoDB, ECR, and SQLite.
-- CI/CD via **GitHub Actions with OIDC** (no long-lived AWS keys) and multi-stage Docker builds tested against a prod-equivalent image.
+- <samp>Trained a **200K info-set CFR blueprint over 50M self-play iterations** for heads-up play.</samp>
+- <samp>On high-stakes river decisions it doesn't just read the blueprint: a **safe, blueprint-anchored solver runs CFR live** to approximate game-theory-optimal play in real time.</samp>
+- <samp>Productionised end to end: Flask/gunicorn API on **AWS Lightsail** behind **Cloudflare**, with DynamoDB, ECR, and SQLite.</samp>
+- <samp>CI/CD via **GitHub Actions with OIDC** (no long-lived AWS keys) and multi-stage Docker builds tested against a prod-equivalent image.</samp>
 
 ### <samp>♟️ Chess explanation engine</samp>
 
@@ -34,7 +34,7 @@ A poker bot you can actually play, live at **[allin.jianrontan.com](https://alli
   <img src="https://opengraph.githubassets.com/1/jianrontan/Chess" alt="Chess repo card" width="20%">
 </a>
 
-Engines tell you the best move; they can't tell you *why*. This is a **RAG pipeline that grounds LLM chess explanations in Stockfish analysis and retrieved human commentaries**, so the explanation matches what the engine actually sees. Live at **[chess.jianrontan.com](https://chess.jianrontan.com)**.
+<samp>Engines tell you the best move; they can't tell you *why*. This is a **RAG pipeline that grounds LLM chess explanations in Stockfish analysis and retrieved human commentaries**, so the explanation matches what the engine actually sees. Live at **[chess.jianrontan.com](https://chess.jianrontan.com)**.</samp>
 
 ## <samp>Stack</samp>
 
@@ -79,11 +79,11 @@ Engines tell you the best move; they can't tell you *why*. This is a **RAG pipel
 <summary><samp>Where I've used all this</samp></summary>
 <br>
 
-- **CPF Board**: Azure GCC infra and CI/CD: Terraform provisioning, AKS, Azure DevOps pipeline templates across non-prod and prod.
-- **NUS Sheares Web**: GitHub Actions CI/CD with Liquibase schema migrations and a plan/apply data pipeline on Postgres; AWS infra with SST (CloudFront, Lambda SSR, S3), isolated preprod/prod on Supabase.
-- **Screening Eagle | Proceq**: Cross-platform E2E test framework (Playwright + TypeScript, 10+ device/browser configs on BrowserStack, GitLab CI); 100+ regression cases automated with Python and AltTester.
-- **TES Capital**: AI document automation (ChatGPT API, n8n, React, Flask): OCR + prompt workflows turning unstructured insurance data into standardised policy documents at 95% accuracy.
-- **Hysses**: Full-stack ops platform (React, Node.js, Express, MySQL, Docker) with a custom NetSuite↔MySQL integration API.
+- <samp>**CPF Board**: Azure GCC infra and CI/CD: Terraform provisioning, AKS, Azure DevOps pipeline templates across non-prod and prod.</samp>
+- <samp>**NUS Sheares Web**: GitHub Actions CI/CD with Liquibase schema migrations and a plan/apply data pipeline on Postgres; AWS infra with SST (CloudFront, Lambda SSR, S3), isolated preprod/prod on Supabase.</samp>
+- <samp>**Screening Eagle | Proceq**: Cross-platform E2E test framework (Playwright + TypeScript, 10+ device/browser configs on BrowserStack, GitLab CI); 100+ regression cases automated with Python and AltTester.</samp>
+- <samp>**TES Capital**: AI document automation (ChatGPT API, n8n, React, Flask): OCR + prompt workflows turning unstructured insurance data into standardised policy documents at 95% accuracy.</samp>
+- <samp>**Hysses**: Full-stack ops platform (React, Node.js, Express, MySQL, Docker) with a custom NetSuite↔MySQL integration API.</samp>
 
 </details>
 
