@@ -1,7 +1,7 @@
 <h1 align="center"><samp>Tan Jian Ron</samp></h1>
 
 <p align="center">
-  <img src="assets/profile-cube.png" width="250" alt="spinning cube made of my profile picture">
+  <img src="assets/profile-cube.png" width="200" alt="spinning cube made of my profile picture">
 </p>
 
 <p align="center"><samp>Computer Science @ NUS · SRE intern @ CPF Board · Singapore</samp></p>

@@ -111,6 +111,17 @@ for i in range(N_FRAMES):
 
     frames.append(canvas)
 
+# crop away the transparent padding: union bbox of the cube across all frames
+l = t = 10**9
+r = b = -1
+for f in frames:
+    bbox = f.getchannel("A").getbbox()
+    l, t = min(l, bbox[0]), min(t, bbox[1])
+    r, b = max(r, bbox[2]), max(b, bbox[3])
+PAD = 2
+box = (max(0, l - PAD), max(0, t - PAD), min(W, r + PAD), min(H, b + PAD))
+frames = [f.crop(box) for f in frames]
+
 frames[0].save(
     OUT, save_all=True, append_images=frames[1:],
     duration=73, loop=0, disposal=0, blend=0,
