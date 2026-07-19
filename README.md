@@ -108,4 +108,4 @@
 
 ---
 
-<p align="center"><samp>🎓 Computer Science @ NUS · 📫 <a href="mailto:jianrontan101@gmail.com">jianrontan101@gmail.com</a></samp></p>
+<p align="center"><samp> Computer Science @ NUS ·  <a href="mailto:jianrontan101@gmail.com">jianrontan101@gmail.com</a></samp></p>
