@@ -16,6 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main # always branch tip, so re-runs don't push from a stale SHA
 
       # Streak cards work with the built-in GITHUB_TOKEN (public contributions only)
       - name: Generate streak card (light)
