@@ -19,42 +19,57 @@ jobs:
         with:
           ref: main # always branch tip, so re-runs don't push from a stale SHA
 
-      # Streak cards work with the built-in GITHUB_TOKEN (public contributions only)
+      # Metrics needs a classic PAT with no scopes, saved as the METRICS_TOKEN
+      # repo secret (the default GITHUB_TOKEN lacks the user-level permissions).
+      # output_action none: file is written to the workspace and committed below
+      # after font patching, instead of the action pushing its own commit.
+      - name: Generate metrics card (header + contribution calendar)
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: jianrontan
+          filename: assets/metrics.svg
+          output_action: none
+          config_timezone: Asia/Singapore
+          base: header
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: half-year
+
+      # Streak cards work with the built-in GITHUB_TOKEN (public contributions
+      # only). Colors are GitHub-green accents over transparent backgrounds.
       - name: Generate streak card (light)
         uses: DenverCoder1/github-readme-streak-stats@main
         with:
-          options: user=jianrontan&theme=default&hide_border=true
+          options: user=jianrontan&hide_border=true&background=00000000&ring=2da44e&fire=2da44e&currStreakNum=1a7f37&sideNums=1a7f37&currStreakLabel=1a7f37&sideLabels=57606a&dates=57606a
           path: assets/streak.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate streak card (dark)
         uses: DenverCoder1/github-readme-streak-stats@main
         with:
-          options: user=jianrontan&theme=tokyonight&hide_border=true&background=00000000
+          options: user=jianrontan&hide_border=true&background=00000000&ring=3fb950&fire=3fb950&currStreakNum=3fb950&sideNums=3fb950&currStreakLabel=8b949e&sideLabels=8b949e&dates=8b949e
           path: assets/streak-dark.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Commit streak cards
+      # Neither generator exposes a font option, so patch the SVGs to use the
+      # same monospace stack GitHub renders <samp> with.
+      - name: Apply monospace font
+        run: |
+          python3 - <<'EOF'
+          import pathlib
+          style = ('<style>svg,svg *{font-family:ui-monospace,SFMono-Regular,'
+                   '"Segoe UI Mono",Consolas,"Liberation Mono",monospace !important}</style>')
+          for p in ['assets/metrics.svg', 'assets/streak.svg', 'assets/streak-dark.svg']:
+              f = pathlib.Path(p)
+              s = f.read_text()
+              i = s.rindex('</svg>')
+              f.write_text(s[:i] + style + s[i:])
+          EOF
+
+      - name: Commit stats
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/streak.svg assets/streak-dark.svg
-          git commit -m "Update streak stats" || exit 0
+          git add assets/metrics.svg assets/streak.svg assets/streak-dark.svg
+          git commit -m "Update profile stats" || exit 0
           git push
-
-      # Metrics needs a classic PAT with no scopes, saved as the METRICS_TOKEN
-      # repo secret (the default GITHUB_TOKEN lacks the user-level permissions).
-      # The action commits assets/metrics.svg itself via committer_token.
-      - name: Generate metrics dashboard
-        uses: lowlighter/metrics@latest
-        with:
-          token: ${{ secrets.METRICS_TOKEN }}
-          user: jianrontan
-          filename: assets/metrics.svg
-          config_timezone: Asia/Singapore
-          base: header, activity, community, repositories
-          plugin_languages: yes
-          plugin_languages_limit: 8
-          plugin_languages_ignored: html, css, jupyter notebook
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: half-year
