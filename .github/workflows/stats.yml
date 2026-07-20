@@ -35,6 +35,14 @@ jobs:
           plugin_isocalendar: yes
           plugin_isocalendar_duration: half-year
 
+      # With output_action none, metrics writes to /metrics_renders on the
+      # runner instead of the workspace, so copy it into the repo ourselves.
+      - name: Collect metrics render
+        run: |
+          f=$(sudo find /metrics_renders -name 'metrics.svg' | head -1)
+          sudo cp "$f" assets/metrics.svg
+          sudo chown "$(id -u):$(id -g)" assets/metrics.svg
+
       # Streak cards work with the built-in GITHUB_TOKEN (public contributions
       # only). Colors are GitHub-green accents over transparent backgrounds.
       - name: Generate streak card (light)
