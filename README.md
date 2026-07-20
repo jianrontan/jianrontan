@@ -91,24 +91,20 @@
 
 </details>
 
-<!-- Stats hidden until the public github-readme-stats instance is reliable (or self-hosted)
+<!-- These SVGs are regenerated daily by .github/workflows/stats.yml -->
 
 ## <samp>Stats</samp>
 
-<p>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=jianrontan&show_icons=true&theme=tokyonight&hide_border=true">
-    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=jianrontan&show_icons=true&theme=default&hide_border=true">
-    <img alt="Jian Ron's GitHub stats" src="https://github-readme-stats.vercel.app/api?username=jianrontan&show_icons=true&hide_border=true">
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=jianrontan&layout=compact&theme=tokyonight&hide_border=true&hide=html,css,jupyter%20notebook">
-    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=jianrontan&layout=compact&theme=default&hide_border=true&hide=html,css,jupyter%20notebook">
-    <img alt="Top languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jianrontan&layout=compact&hide_border=true&hide=html,css,jupyter%20notebook">
-  </picture>
+<p align="center">
+  <img src="assets/metrics.svg" alt="GitHub metrics">
 </p>
 
--->
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/streak-dark.svg">
+    <img src="assets/streak.svg" alt="GitHub streak">
+  </picture>
+</p>
 
 ---
 
