@@ -19,11 +19,7 @@
 
 ## <samp>Projects</samp>
 
-### <samp>AllIn: heads-up poker AI</samp>
-
-<a href="https://github.com/jianrontan/AllIn">
-  <img src="assets/allin-spin.svg" alt="AllIn logo" width="140">
-</a>
+### <a href="https://github.com/jianrontan/AllIn"><img src="assets/allin-spin.svg" alt="AllIn logo" height="30" align="absmiddle"> <samp>AllIn: heads-up poker AI</samp></a>
 
 <samp>A poker bot you can actually play, live at **[allin.jianrontan.com](https://allin.jianrontan.com)**.</samp>
 
@@ -32,11 +28,7 @@
 - <samp>Productionised end to end: Flask/gunicorn API on **AWS Lightsail** behind **Cloudflare**, with DynamoDB, ECR, and SQLite.</samp>
 - <samp>CI/CD via **GitHub Actions with OIDC** (no long-lived AWS keys) and multi-stage Docker builds tested against a prod-equivalent image.</samp>
 
-### <samp>Chess explanation engine</samp>
-
-<a href="https://github.com/jianrontan/Chess">
-  <img src="assets/chess-cube.png" alt="Chess logo" width="140">
-</a>
+### <a href="https://github.com/jianrontan/Chess"><img src="assets/chess-spin.png" alt="Chess logo" height="30" align="absmiddle"> <samp>Chess explanation engine</samp></a>
 
 <samp>Engines tell you the best move; they can't tell you *why*. This is a **RAG pipeline that grounds LLM chess explanations in Stockfish analysis and retrieved human commentaries**, so the explanation matches what the engine actually sees. Live at **[chess.jianrontan.com](https://chess.jianrontan.com)**.</samp>
 
@@ -97,6 +89,10 @@
 
 <p align="center">
   <img src="assets/metrics.svg" alt="GitHub metrics">
+</p>
+
+<p align="center">
+  <a href="https://github.com/jianrontan?tab=repositories"><img src="https://img.shields.io/github/stars/jianrontan?style=flat&logo=github&label=Total%20stars&color=2da44e" alt="Total stars"></a>
 </p>
 
 <p align="center">

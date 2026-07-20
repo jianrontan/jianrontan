@@ -35,6 +35,8 @@ FACES = [
     ([(-1, 1, 1), (-1, 1, -1), (-1, -1, -1), (-1, -1, 1)], (-1, 0, 0)),   # left
 ]
 TOP = ([(-1, 1, 1), (1, 1, 1), (1, 1, -1), (-1, 1, -1)], (0, 1, 0))
+# single flat face through the rotation axis: spins in place like a coin
+FACE = ([(-1, 1, 0), (1, 1, 0), (1, -1, 0), (-1, -1, 0)], (0, 0, -1))
 
 LIGHT = np.array([0.35, 0.55, -0.76])
 LIGHT = LIGHT / np.linalg.norm(LIGHT)
@@ -82,14 +84,20 @@ def shade(tex, brightness):
 
 
 def render_cube(texture, out_path, top_color=(30, 34, 42), transparent=False,
-                textured_faces=(0, 1, 2, 3)):
+                textured_faces=(0, 1, 2, 3), coin=False):
     """transparent=True renders a glass cube: no top face, and back faces stay
     visible (shaded by their inward-facing side) since you can see through.
     textured_faces picks which of the 4 side faces get the texture; the rest
-    are empty (only meaningful together with transparent=True)."""
-    faces = [FACES[i] for i in textured_faces]
-    if not transparent:
-        faces = faces + [TOP]
+    are empty (only meaningful together with transparent=True).
+    coin=True ignores the cube entirely and spins FACE about its own y-axis,
+    so the texture rotates in place with no side-to-side sweep."""
+    if coin:
+        faces = [FACE]
+        transparent = True  # the mirrored back side stays visible
+    else:
+        faces = [FACES[i] for i in textured_faces]
+        if not transparent:
+            faces = faces + [TOP]
     frames = []
     for i in range(N_FRAMES):
         theta = 2 * np.pi * i / N_FRAMES
@@ -105,6 +113,11 @@ def render_cube(texture, out_path, top_color=(30, 34, 42), transparent=False,
                 n = -n
             pts = [R @ np.array(c, dtype=np.float64) for c in corners]
             quad, depth = project(pts)
+            # skip near-edge-on frames where the homography is singular
+            area = abs(sum(x0 * y1 - x1 * y0 for (x0, y0), (x1, y1)
+                           in zip(quad, quad[1:] + quad[:1]))) / 2
+            if area < 4:
+                continue
             brightness = 0.45 + 0.55 * max(0.0, float(n @ LIGHT))
             drawlist.append((depth, quad, brightness, normal == (0, 1, 0)))
 
@@ -128,6 +141,8 @@ def render_cube(texture, out_path, top_color=(30, 34, 42), transparent=False,
     r = b = -1
     for f in frames:
         bbox = f.getchannel("A").getbbox()
+        if bbox is None:  # blank frame (coin seen exactly edge-on)
+            continue
         l, t = min(l, bbox[0]), min(t, bbox[1])
         r, b = max(r, bbox[2]), max(b, bbox[3])
     pad = 2
@@ -161,5 +176,4 @@ def chess_texture():
 
 if __name__ == "__main__":
     render_cube(avatar_texture(), os.path.join(HERE, "profile-cube.png"))
-    render_cube(chess_texture(), os.path.join(HERE, "chess-cube.png"),
-                transparent=True, textured_faces=(0,))
+    render_cube(chess_texture(), os.path.join(HERE, "chess-spin.png"), coin=True)

@@ -48,14 +48,14 @@ jobs:
       - name: Generate streak card (light)
         uses: DenverCoder1/github-readme-streak-stats@main
         with:
-          options: user=jianrontan&hide_border=true&background=00000000&ring=2da44e&fire=2da44e&currStreakNum=1a7f37&sideNums=1a7f37&currStreakLabel=1a7f37&sideLabels=57606a&dates=57606a
+          options: user=jianrontan&hide_border=true&background=00000000&ring=fb8c00&fire=fb8c00&currStreakNum=1a7f37&sideNums=1a7f37&currStreakLabel=1a7f37&sideLabels=57606a&dates=57606a
           path: assets/streak.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate streak card (dark)
         uses: DenverCoder1/github-readme-streak-stats@main
         with:
-          options: user=jianrontan&hide_border=true&background=00000000&ring=3fb950&fire=3fb950&currStreakNum=3fb950&sideNums=3fb950&currStreakLabel=8b949e&sideLabels=8b949e&dates=8b949e
+          options: user=jianrontan&hide_border=true&background=00000000&ring=ffa028&fire=ffa028&currStreakNum=3fb950&sideNums=3fb950&currStreakLabel=8b949e&sideLabels=8b949e&dates=8b949e
           path: assets/streak-dark.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
