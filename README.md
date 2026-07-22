@@ -7,6 +7,7 @@
 <p align="center"><samp>Computer Science @ NUS · SRE intern @ CPF Board · Singapore</samp></p>
 
 <p align="center">
+  <a href="https://jianrontan.com"><img src="https://img.shields.io/badge/Portfolio-jianrontan.com-181717?style=flat&logo=googlechrome&logoColor=white" alt="Portfolio"></a>
   <a href="mailto:jianrontan101@gmail.com"><img src="https://img.shields.io/badge/Email-jianrontan101%40gmail.com-EA4335?style=flat&logo=gmail&logoColor=white" alt="Email"></a>
   <a href="https://allin.jianrontan.com"><img src="https://img.shields.io/badge/AllIn-allin.jianrontan.com-232F3E?style=flat&logo=cloudflare&logoColor=F38020" alt="AllIn live site"></a>
   <a href="https://chess.jianrontan.com"><img src="https://img.shields.io/badge/Chess-chess.jianrontan.com-4169E1?style=flat&logo=lichess&logoColor=white" alt="Chess live site"></a>
@@ -104,4 +105,4 @@
 
 ---
 
-<p align="center"><samp> Computer Science @ NUS ·  <a href="mailto:jianrontan101@gmail.com">jianrontan101@gmail.com</a></samp></p>
+<p align="center"><samp> Computer Science @ NUS ·  <a href="https://jianrontan.com">jianrontan.com</a></samp></p>
