@@ -16,7 +16,7 @@
 
 ## <samp>About</samp>
 
-<samp>I'm Ron, a Computer Science undergraduate at NUS. Currently an SRE intern at the Central Provident Fund Board, working on Terraform, AKS, and Azure DevOps pipelines for systems serving 4M+ CPF members. Also Vice-Chair of NUS Sheares Web, where I lead 16 developers shipping a hall intranet and React Native app used by 400+ residents.</samp>
+<samp>I'm Ron, a Computer Science undergraduate at NUS. Currently an SRE intern at the Central Provident Fund Board, working across ~30 repositories on security scanning, Terraform, AKS, and Azure DevOps pipeline reliability for systems serving 4M+ CPF members. Also Vice-Chair of NUS Sheares Web, where I lead 16 developers shipping a hall intranet and React Native app used by 400+ residents.</samp>
 
 ## <samp>Projects</samp>
 
@@ -24,10 +24,18 @@
 
 <samp>A poker bot you can actually play, live at **[allin.jianrontan.com](https://allin.jianrontan.com)**.</samp>
 
-- <samp>Trained a **200K info-set CFR blueprint over 50M self-play iterations** for heads-up play.</samp>
+- <samp>Trained a **~195K info-set CFR blueprint over 52M self-play iterations** for heads-up play.</samp>
 - <samp>On high-stakes river decisions it doesn't just read the blueprint: a **safe, blueprint-anchored solver runs CFR live** to approximate game-theory-optimal play in real time.</samp>
 - <samp>Productionised end to end: Flask/gunicorn API on **AWS Lightsail** behind **Cloudflare**, with DynamoDB, ECR, and SQLite.</samp>
 - <samp>CI/CD via **GitHub Actions with OIDC** (no long-lived AWS keys) and multi-stage Docker builds tested against a prod-equivalent image.</samp>
+
+### <a href="https://github.com/jianrontan/leasework"><samp>leasework: distributed job scheduler</samp></a>
+
+<samp>A job scheduler in **Go** on **Postgres, Kafka, and Redis**, built around one promise: every job runs, and no job takes effect twice. *In progress.*</samp>
+
+- <samp>Microservices (HTTP API, scheduler, workers) on a **3-broker Kafka cluster (12 partitions, RF 3)**.</samp>
+- <samp>A **transactional outbox** writes the job and its publish intent in one Postgres transaction, so a crash between the DB write and the Kafka publish can't lose a job.</samp>
+- <samp>Next up: **Redis-backed fenced leases** so a stalled worker that wakes up late can't double-apply a job, plus **Prometheus/Grafana** SLOs and autoscaling on consumer lag, on Kubernetes behind Envoy Gateway.</samp>
 
 ### <a href="https://github.com/jianrontan/Chess"><img src="assets/chess-spin.png" alt="Chess logo" height="30" align="absmiddle"> <samp>Chess explanation engine</samp></a>
 
@@ -39,6 +47,7 @@
 
 <p>
   <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white" alt="Go">
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white" alt="TypeScript">
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black" alt="JavaScript">
   <img src="https://img.shields.io/badge/Java-007396?style=flat" alt="Java">
@@ -56,6 +65,9 @@
   <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat&logo=githubactions&logoColor=white" alt="GitHub Actions">
   <img src="https://img.shields.io/badge/GitLab%20CI-FC6D26?style=flat&logo=gitlab&logoColor=white" alt="GitLab CI">
   <img src="https://img.shields.io/badge/Cloudflare-F38020?style=flat&logo=cloudflare&logoColor=white" alt="Cloudflare">
+  <img src="https://img.shields.io/badge/Kafka-231F20?style=flat&logo=apachekafka&logoColor=white" alt="Kafka">
+  <img src="https://img.shields.io/badge/Prometheus-E6522C?style=flat&logo=prometheus&logoColor=white" alt="Prometheus">
+  <img src="https://img.shields.io/badge/Grafana-F46800?style=flat&logo=grafana&logoColor=white" alt="Grafana">
 </p>
 
 **<samp>Web & data</samp>**
@@ -68,6 +80,7 @@
   <img src="https://img.shields.io/badge/Flask-000000?style=flat&logo=flask&logoColor=white" alt="Flask">
   <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white" alt="PostgreSQL">
   <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white" alt="MySQL">
+  <img src="https://img.shields.io/badge/Redis-DC382D?style=flat&logo=redis&logoColor=white" alt="Redis">
   <img src="https://img.shields.io/badge/Supabase-3FCF8E?style=flat&logo=supabase&logoColor=white" alt="Supabase">
   <img src="https://img.shields.io/badge/DynamoDB-4053D6?style=flat&logo=amazondynamodb&logoColor=white" alt="DynamoDB">
 </p>
@@ -76,7 +89,7 @@
 <summary><samp>Where I've used all this</samp></summary>
 <br>
 
-- <samp>**CPF Board**: Azure GCC infra and CI/CD: Terraform provisioning, AKS, Azure DevOps pipeline templates across non-prod and prod.</samp>
+- <samp>**CPF Board**: Azure GCC infra and CI/CD: weekly security scan orchestration wiring SonarQube, Fortify, Mend, and Trivy into 20+ pipelines; Trivy IaC/image scanning in shared templates used by 170+ pipelines; Terraform for Key Vault private endpoints and AKS upgrades across non-prod and prod.</samp>
 - <samp>**NUS Sheares Web**: GitHub Actions CI/CD with Liquibase schema migrations and a plan/apply data pipeline on Postgres; AWS infra with SST (CloudFront, Lambda SSR, S3), isolated preprod/prod on Supabase.</samp>
 - <samp>**Screening Eagle | Proceq**: Cross-platform E2E test framework (Playwright + TypeScript, 10+ device/browser configs on BrowserStack, GitLab CI); 100+ regression cases automated with Python and AltTester.</samp>
 - <samp>**TES Capital**: AI document automation (ChatGPT API, n8n, React, Flask): OCR + prompt workflows turning unstructured insurance data into standardised policy documents at 95% accuracy.</samp>
